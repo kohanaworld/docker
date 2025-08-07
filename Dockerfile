@@ -102,9 +102,9 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list~ && \
     php-pgsql \
     php-apcu \
     php-gmagick && \
-    echo 'xdebug.mode = coverage ' >> /etc/php/8.3/cli/php.ini && \
-    echo 'apc.enabled=1' >> /etc/php/8.3/cli/php.ini && \
-    echo 'apc.enable_cli=1' >> /etc/php/8.3/cli/php.ini && \
+    echo 'xdebug.mode = coverage ' >> /etc/php/8.4/cli/php.ini && \
+    echo 'apc.enabled=1' >> /etc/php/8.4/cli/php.ini && \
+    echo 'apc.enable_cli=1' >> /etc/php/8.4/cli/php.ini && \
     apt-get -qq remove  gcc php-dev php7.3-dev && \
     echo 'Y' | apt -qq autoremove && \
     rm -rf /var/lib/apt/lists/*
